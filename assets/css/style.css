@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+header {
+	background-color: darkblue;
+	padding: 30px 0 100px;
+	margin-bottom: 50px;
+}
+.header-container {
+	max-width: 1440px;
+	width: 90%;
+	margin: auto;
+}
+.navbar,
+.navbar ul,
+.navbar li {
+	display: inline-block;
+}
+.navbar li {
+	margin: 0 10px;
+}
+header a {
+	color: white;
+	font-size: 30px;
+	text-transform: capitalize;
+}
+.navbar a {
+	transition-property: all;
+	/* transition-delay: 1s; */
+	transition-delay: 0.2s;
+	transition-duration: 3s;
+	transition-timing-function: ease;
+}
+.navbar a:hover {
+	background-color: cadetblue;
+	color: brown;
+}
+
+.logo {
+	text-transform: uppercase;
+}
+
+section {
+	margin-bottom: 50px;
+}
+.section-container {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+.box {
+	display: inline-block;
+	width: 32%;
+	position: relative;
+}
+
+.box img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+.box div,
+.card div {
+	padding: 10px;
+	position: absolute;
+	bottom: 10px;
+	/* left: 5%; */
+
+	background-color: rgb(240, 248, 255);
+	width: 90%;
+	/* top: 50%; */
+	left: 50%;
+	/* transform: translate(-50%, -50%); */
+	transform: translateX(-50%);
+}
+
+.box p,
+.card p {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.box:nth-child(2) p {
+	opacity: 0.5;
+}
+.box:nth-child(3) p {
+	background-color: rgba(240, 248, 255, 0.5);
+}
+
+.card:nth-child(1) {
+	background-image: url("../images/img1.jpg");
+}
+.card:nth-child(2) {
+	background-image: url("../images/img2.jpg");
+}
+.card:nth-child(3) {
+	background-image: url("../images/img3.jpg");
+}
+
+.card {
+	width: 32%;
+	height: 300px;
+	background-color: red;
+	display: inline-block;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: darken;
+}
+
+.bg-attachment {
+	height: 300px;
+	background-image: url("../images/img4.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.card {
+	transition-property: background-image;
+	transition-delay: 0.3s;
+	transition-duration: 2s;
+}
+.card div {
+	transition-property: all;
+	transition-delay: 0.3s;
+	transition-duration: 1s;
+}
+.card:hover {
+	/* background-image: url("../images/img4.jpg"); */
+}
+.card:hover div {
+	background-color: aqua;
+	bottom: 20px;
+}
+.animations {
+	position: relative;
+	padding: 50px 0;
+	min-height: 100vh;
+}
+.left,
+.right {
+	width: 50px;
+	height: 50px;
+	background-color: blueviolet;
+	position: absolute;
+}
+
+.left {
+	top: 50%;
+	left: 0;
+	animation-name: moveRight;
+	animation-delay: 1s;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+
+	animation-iteration-count: 5;
+
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+.right {
+	right: 0;
+	top: 20%;
+	background-color: blue;
+	animation-name: moveLeft;
+	animation-delay: 1s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+
+	animation-iteration-count: infinite;
+
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
